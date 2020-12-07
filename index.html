@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+
   <title>AAAAAAAAAAAAAA</title>
-
-<body>
-  hi
-</body>
+<head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Clicks" + localStorage.clickcount;
+  } else {
+    document.getElementById("result").innerHTML = "no";
+  }
+}
+</script>
 </head>
+<body>
 
+<p><button onclick="clickCounter()" type="button">Button</button></p>
+<div id="result"></div>
+  </body>
 </html>
