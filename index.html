@@ -12,7 +12,7 @@ function clickCounter() {
     } else {
       localStorage.clickcount = 1;
     }
-    document.getElementById("result").innerHTML = "Clicks" + localStorage.clickcount;
+    document.getElementById("result").innerHTML = localStorage.clickcount;
   } else {
     document.getElementById("result").innerHTML = "no";
   }
