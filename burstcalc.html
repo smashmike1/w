@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
-<title>AAAAAAAAAAAAAA</title>
+<link rel="stylesheet" href="burstcalc.css">
+<title>AAAAAAAAAA</title>
 
 <head>
-  <p>Firerate</p>
-  <input type="text" id="rate" name="rate">
-  <p>Burst</p>
-  <input type="text" id="bullets" name="bullets">
-  <p>Aim Speed</p>
-  <input type="text" id="aimspeed" name="speed">
-  <button type="submit" onclick="enter()">Enter</button>
-  <p id="result"></p>
+
+<body>
   <script>
     function enter() {
       var rpm = document.getElementById("rate").value;
@@ -23,6 +18,25 @@
       document.getElementById("result").innerHTML = Math.ceil(z);
     }
   </script>
-  </body>
+  <div class="header">
+    <h1>Burst Calculator</h1>
+  </div>
+  <div class="topnav">
+    <a href="https://smashmike1.github.io/">Home</a>
+    <a href="https://smashmike1.github.io/burstcalc">Burst Calculator</a>
+    <a href="https://smashmike1.github.io/blank">Blank</a>
+  </div>
+</body>
+<center style="font-size:100%;">
+  <p class="text1">Firerate</p>
+  <input type="text" class="input1" id="rate" name="rate">
+  <p class="text2">Burst</p>
+  <input type="text" class="input2" id="bullets" name="bullets">
+  <p class="text3">Aim Speed</p>
+  <input type="text" class="input3" id="aimspeed" name="speed">
+  <p>   </p>
+  <button type="submit" onclick="enter()">Enter</button>
+  <p class="text4" id=result></p>
+</center>
 
 </html>
