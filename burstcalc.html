@@ -16,7 +16,9 @@
       var exact = second * burstnum;
       var end = exact + +delay;
       var last = end * 3;
-      document.getElementById("result").innerHTML = Math.ceil(last);
+      var sublast = last - delay;
+      document.getElementById("result").innerHTML = Math.ceil(sublast);
+      document.getElementById("deladd").innerHTML = "+"(delay);
     }
   </script>
   <div class="header">
@@ -41,6 +43,7 @@
   <p>   </p>
   <button type="submit" onclick="enter()">Enter</button>
   <p class="text4" id=result></p>
+  <p class="adddel" id=deladd></p>
 </center>
 
 </html>
