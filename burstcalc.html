@@ -14,7 +14,8 @@
       var minute = rpm / 60;
       var second = minute / 1000;
       var exact = second * burstnum;
-      var end = exact + +delay
+      var end = exact + +delay;
+      var last = end * 3;
       document.getElementById("result").innerHTML = Math.ceil(end);
     }
   </script>
