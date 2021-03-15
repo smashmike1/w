@@ -9,13 +9,13 @@
   <script>
     function enter() {
       var rpm = document.getElementById("rate").value;
-      var burstnum = document.getElementById("bullets").value;
-      var delay = document.getElementById("aimspeed").value;
+      var burstnum = document.getElementById("burst").value;
+      var delay = document.getElementById("delay").value;
       var minute = rpm / 60;
       var second = minute / 1000;
       var exact = second * burstnum;
-      var z = +delay + +exact;
-      document.getElementById("result").innerHTML = Math.ceil(z);
+      var end = exact + +delay
+      document.getElementById("result").innerHTML = Math.ceil(end);
     }
   </script>
   <div class="header">
@@ -34,9 +34,9 @@
   <p class="text1">Firerate</p>
   <input type="text" class="input1" id="rate" name="rate">
   <p class="text2">Burst</p>
-  <input type="text" class="input2" id="bullets" name="bullets">
-  <p class="text3">Aim Speed</p>
-  <input type="text" class="input3" id="aimspeed" name="speed">
+  <input type="text" class="input2" id="burst" name="bullets">
+  <p class="text3">Recovery Speed</p>
+  <input type="text" class="input3" id="delay" name="speed">
   <p>   </p>
   <button type="submit" onclick="enter()">Enter</button>
   <p class="text4" id=result></p>
