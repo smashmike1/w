@@ -10,15 +10,11 @@
     function enter() {
       var rpm = document.getElementById("rate").value;
       var burstnum = document.getElementById("burst").value;
-      var delay = document.getElementById("delay").value;
-      var minute = rpm / 60;
-      var second = minute / 1000;
-      var exact = second * burstnum;
-      var end = exact + +delay;
-      var last = end * 3;
-      var sublast = last - delay;
+      var rpmdiv = 60000 / rpm
+      var rounds = rpmdiv * burstnum
+      var result = rounds + + 10
+      
       document.getElementById("result").innerHTML = Math.ceil(sublast);
-      document.getElementById("deladd").innerHTML = "+"(delay);
     }
   </script>
   <div class="header">
@@ -39,12 +35,9 @@
   <input type="text" class="input1" id="rate" name="rate">
   <p class="text2">Burst</p>
   <input type="text" class="input2" id="burst" name="bullets">
-  <p class="text3">Recovery Speed</p>
-  <input type="text" class="input3" id="delay" name="speed">
-  <p>   </p>
+<br>
   <button type="submit" onclick="enter()">Enter</button>
   <p class="text4" id=result></p>
-  <p class="adddel" id=deladd></p>
 </center>
 
 </html>
